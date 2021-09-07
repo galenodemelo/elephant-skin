@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Aaux ProMedium';
+    src: local('Aaux ProMedium'), local('AauxProMedium'),
+        url('/fonts/AauxProMedium.woff2') format('woff2'),
+        url('/fonts/AauxProMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Etna';
+    src: local('Etna'),
+        url('/fonts/Etna.woff2') format('woff2'),
+        url('/fonts/Etna.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
