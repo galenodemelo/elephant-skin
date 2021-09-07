@@ -1,3 +1,4 @@
+import '@styles/globals.sass'
 import type { AppProps } from 'next/app'
 import Layout from '@components/templates/layout'
 
