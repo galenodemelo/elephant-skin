@@ -21,6 +21,7 @@ export default function Header() {
             <div className={styles.menu}>
                 <div className={styles.info}>
                     <SocialLinks />
+                    <Cities />
                 </div>
 
                 <nav className={styles.nav}>
