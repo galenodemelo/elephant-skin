@@ -1,4 +1,6 @@
 import Image from "next/image"
+import SocialLinks from "./SocialLinks"
+
 import styles from "./Header.module.sass"
 
 export default function Header() {
@@ -17,6 +19,10 @@ export default function Header() {
             </div>
 
             <div className={styles.menu}>
+                <div className={styles.info}>
+                    <SocialLinks />
+                </div>
+
                 <nav className={styles.nav}>
                     <a href="#" className={styles.link}>
                         Hello
