@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import styles from "./Cities.module.sass"
 
 const cityList: {name: string, timeZone: string}[] = [
@@ -10,6 +11,15 @@ const cityList: {name: string, timeZone: string}[] = [
 ]
 
 export default function Cities() {
+    const refreshTimeInSeconds: number = 15
+    const [currentDate, setCurrentDate] = useState<Date>(new Date())
+
+    useEffect(() => {
+        setTimeout(() => {
+            setCurrentDate(new Date())
+        }, refreshTimeInSeconds * 1000)
+    }, [currentDate])
+
     return (
         <ul className={styles.cities}>
             {cityList.map((city, index) => {
@@ -19,7 +29,7 @@ export default function Cities() {
                             {city.name}
                         </b>
                         <time className={styles.time}>
-                            {getCurrentTime(city.timeZone)}
+                            {getCurrentTime(currentDate, city.timeZone)}
                         </time>
                     </li>
                 )
@@ -28,8 +38,8 @@ export default function Cities() {
     )
 }
 
-function getCurrentTime(timeZone: string): string {
-    return new Date().toLocaleTimeString("en-US", {
+function getCurrentTime(currentDate: Date, timeZone: string): string {
+    return currentDate.toLocaleTimeString("en-US", {
         timeZone: timeZone,
         hour: "numeric",
         minute: "2-digit",
