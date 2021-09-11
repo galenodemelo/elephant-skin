@@ -18,31 +18,21 @@ export default function Header() {
 
             <div className={styles.menu}>
                 <nav className={styles.nav}>
-                    <div>
-                        <a href="#" className={styles.link}>
-                            Hello
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" className={styles.link}>
-                            Stories
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" className={styles.link}>
-                            Moodboard
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" className={styles.link}>
-                            Careers
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" className={styles.link}>
-                            Contact
-                        </a>
-                    </div>
+                    <a href="#" className={styles.link}>
+                        Hello
+                    </a>
+                    <a href="#" className={styles.link}>
+                        Stories
+                    </a>
+                    <a href="#" className={styles.link}>
+                        Moodboard
+                    </a>
+                    <a href="#" className={styles.link}>
+                        Careers
+                    </a>
+                    <a href="#" className={styles.link}>
+                        Contact
+                    </a>
                 </nav>
             </div>
         </header>
