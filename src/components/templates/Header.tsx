@@ -12,9 +12,7 @@ export default function Header() {
                 </div>
 
                 <button className={styles.button}>
-                    <hr />
-                    <hr />
-                    <hr />
+                    <Image src="/img/menu-animation.gif" layout="fill" alt="Bars animation growing and shrinking" />
                 </button>
             </div>
         </header>
