@@ -3,6 +3,7 @@ import Image from "next/image"
 import SocialLinks from "./SocialLinks"
 
 import styles from "./Header.module.sass"
+import HelperLinks from "./HelperLinks"
 
 export default function Header() {
     return (
@@ -23,6 +24,7 @@ export default function Header() {
                 <div className={styles.contact}>
                     <SocialLinks />
                     <Cities />
+                    <HelperLinks />
                 </div>
 
                 <nav className={styles.nav}>
