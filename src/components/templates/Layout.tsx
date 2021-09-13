@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Header from './Header'
 
 type Props = {
     title: string,
@@ -19,6 +20,8 @@ export default function Layout({title, description, children}: Props) {
                 <meta name="description" content={description} />
                 <link rel="shortcut icon" href="/img/favicon.jpg" type="image/jpeg" />
             </Head>
+
+            <Header />
 
             {children}
         </>
