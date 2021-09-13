@@ -1,18 +1,12 @@
 $bar-height: 40px
-$open-animation-durations: 2s
+$open-animation-duration: 1.2s
     
 .header
-    display: grid
-    grid-template-rows: 1fr auto
-    justify-content: center
     position: fixed
     top: 0
     left: 0
-    right: 0
     z-index: 1000
     width: 100%
-    box-sizing: border-box
-    padding-bottom: $bar-height
 
     .bar
         display: flex
@@ -32,37 +26,48 @@ $open-animation-durations: 2s
             cursor: pointer
 
     .menu
-        position: relative
-        display: none
+        position: absolute
+        display: flex
         align-items: flex-end
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        background-color: var(--pink-color)
+        clip-path: circle(0% at calc(50vw + var(--center-width) / 2 - #{$bar-height}) calc(#{$bar-height} * 1.5))
+        transition: clip-path ease $open-animation-duration
+        z-index: -10
+        padding-bottom: $bar-height
 
-        .nav
-            position: absolute
-            right: 0
-            bottom: 0
-            
-            &:hover .link
-                opacity: .6
+        .content
+            position: relative
 
-            .link
-                display: block
-                float: right
-                clear: both
-                color: var(--white-color)
-                text-decoration: none
-                text-transform: uppercase
-                font-size: 8rem
-                line-height: .8
-                font-family: var(--font-etna)
-                transition: transform .3s ease, opacity .3s ease
-                transform-origin: right center
+            .nav
+                position: absolute
+                right: 0
+                bottom: 0
 
-                &:hover
-                    transform: scale(1.2)
-                    opacity: 1
+                &:hover .link
+                    opacity: .6
+
+                .link
+                    display: block
+                    float: right
+                    clear: both
+                    color: var(--white-color)
+                    text-decoration: none
+                    text-transform: uppercase
+                    font-size: 8rem
+                    line-height: .8
+                    font-family: var(--font-etna)
+                    transition: transform .3s ease, opacity .3s ease
+                    transform-origin: right center
+
+                    &:hover
+                        transform: scale(1.2)
+                        opacity: 1
 
     &--opened
-        background-color: var(--pink-color)
         height: 100vh
 
         .bar
@@ -70,4 +75,4 @@ $open-animation-durations: 2s
                 filter: brightness(100)
 
         .menu
-            display: flex
+            clip-path: circle(150vw at calc(50vw + var(--center-width) / 2 - #{$bar-height}) calc(#{$bar-height} * 1.5))

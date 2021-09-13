@@ -28,30 +28,32 @@ export default function Header() {
                 </button>
             </div>
 
-            <div className={[styles.menu, "grid-centered"].join(" ")}>
-                <div className={styles.contact}>
-                    <SocialLinks />
-                    <Cities />
-                    <HelperLinks />
-                </div>
+            <div className={styles.menu}>
+                <div className={[styles.content, "grid-centered"].join(" ")}>
+                    <div className={styles.contact}>
+                        <SocialLinks />
+                        <Cities />
+                        <HelperLinks />
+                    </div>
 
-                <nav className={styles.nav}>
-                    <a href="#" className={styles.link}>
-                        Hello
-                    </a>
-                    <a href="#" className={styles.link}>
-                        Stories
-                    </a>
-                    <a href="#" className={styles.link}>
-                        Moodboard
-                    </a>
-                    <a href="#" className={styles.link}>
-                        Careers
-                    </a>
-                    <a href="#" className={styles.link}>
-                        Contact
-                    </a>
-                </nav>
+                    <nav className={styles.nav}>
+                        <a href="#" className={styles.link}>
+                            Hello
+                        </a>
+                        <a href="#" className={styles.link}>
+                            Stories
+                        </a>
+                        <a href="#" className={styles.link}>
+                            Moodboard
+                        </a>
+                        <a href="#" className={styles.link}>
+                            Careers
+                        </a>
+                        <a href="#" className={styles.link}>
+                            Contact
+                        </a>
+                    </nav>
+                </div>
             </div>
         </header>
     )
