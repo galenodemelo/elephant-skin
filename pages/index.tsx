@@ -1,7 +1,11 @@
 import { GetStaticProps } from "next"
+import BasePage from "@components/templates/BasePage"
 
 export default function Home() {
-    return (<></>)
+    return (
+        <BasePage>
+        </BasePage>
+    )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
