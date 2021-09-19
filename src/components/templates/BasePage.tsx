@@ -19,7 +19,7 @@ export default function BasePage({ children }: Props) {
             direction="vertical"
             modules={modulesList}
             mousewheel={{
-                eventsTarget: "*[swiper-scrollable]"
+                eventsTarget: ".swiper-slide > section > *:not([swiper-not-scrollable])"
             }}
             slidesPerView={1}
         >
