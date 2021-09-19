@@ -23,6 +23,7 @@ export default function BasePage({ children }: Props) {
             }}
             onInit={setSlideAsActive}
             onSlideChangeTransitionEnd={setSlideAsActive}
+            preloadImages={true}
             slidesPerView={1}
         >
             {children.map((child: JSX.Element, index: number) => {
