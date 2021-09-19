@@ -1,5 +1,5 @@
 import styles from "./BasePage.module.sass"
-import { Swiper } from "swiper/react"
+import { Swiper, SwiperSlide } from "swiper/react"
 import { Mousewheel } from "swiper"
 
 import "swiper/css"
@@ -18,10 +18,18 @@ export default function BasePage({ children }: Props) {
             className={styles.basePage}
             direction="vertical"
             modules={modulesList}
-            mousewheel={true}
+            mousewheel={{
+                eventsTarget: "*[swiper-scrollable]"
+            }}
             slidesPerView={1}
         >
-            {children}
+            {children.map((child: JSX.Element, index: number) => {
+                return (
+                    <SwiperSlide key={index}>
+                        {child}
+                    </SwiperSlide>
+                )
+            })}
         </Swiper>
     )
 }
