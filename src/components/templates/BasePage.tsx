@@ -21,6 +21,8 @@ export default function BasePage({ children }: Props) {
             mousewheel={{
                 eventsTarget: ".swiper-slide > section > *:not([swiper-not-scrollable])"
             }}
+            onInit={setSlideAsActive}
+            onSlideChangeTransitionEnd={setSlideAsActive}
             slidesPerView={1}
         >
             {children.map((child: JSX.Element, index: number) => {
@@ -32,4 +34,8 @@ export default function BasePage({ children }: Props) {
             })}
         </Swiper>
     )
+}
+
+function setSlideAsActive(swiper) {
+    swiper.el.querySelector(".swiper-slide-active section").setAttribute("data-active", "true")
 }
