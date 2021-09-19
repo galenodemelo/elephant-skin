@@ -1,7 +1,13 @@
 import { GetStaticProps } from "next"
+import BasePage from "@components/templates/BasePage"
+import Customers from "@components/templates/Customers"
 
 export default function Home() {
-    return (<></>)
+    return (
+        <BasePage>
+            <Customers />
+        </BasePage>
+    )
 }
 
 export const getStaticProps: GetStaticProps = async () => {

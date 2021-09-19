@@ -1,0 +1,96 @@
+.customers
+    display: grid
+    grid-template-columns: 45% auto 40px
+    padding: calc(var(--navbar-height) * 2) 120px 0 0
+    box-sizing: border-box
+
+    .banner
+        position: relative
+        height: 100%
+        align-self: flex-end
+        animation-play-state: paused
+        animation-name: elephant-show
+        animation-timing-function: ease
+        animation-duration: 1s
+        animation-fill-mode: forwards
+
+    .customerList
+        position: relative
+        display: inline-grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 12px 40px
+        align-self: center
+        max-height: 90%
+        width: 100%
+        padding-left: 40px
+        padding-right: 24px
+        overflow-x: hidden
+        overflow-y: auto
+        box-sizing: border-box
+        animation-play-state: paused
+        animation-name: client-list-show
+        animation-timing-function: ease
+        animation-delay: 1s
+        animation-duration: .8s
+        animation-fill-mode: forwards
+        visibility: hidden
+
+        > li
+            position: relative
+            filter: grayscale(1)
+
+    .heading
+        position: relative
+        font-family: var(--font-aaux)
+        font-size: 1rem
+        font-weight: normal
+        color: var(--pink-color)
+        writing-mode: vertical-lr
+        transform: rotate(180deg)
+        text-align: center
+        justify-self: end
+        animation-play-state: paused
+        animation-name: heading-show
+        animation-timing-function: ease
+        animation-delay: 1.6s
+        animation-duration: .8s
+        animation-fill-mode: forwards
+        opacity: 0
+
+    &[data-active="true"]
+        .banner,
+        .customerList,
+        .heading
+            animation-play-state: running
+
+@keyframes elephant-show
+    0%
+        left: -100%
+        top: 100%
+
+    60%
+        left: 5%
+        top: 0%
+
+    100%
+        top: 0%
+        left: 0%
+
+@keyframes client-list-show
+    0%
+        visibility: visible
+        top: 100%
+
+    100%
+        visibility: visible
+        top: 0%
+
+
+@keyframes heading-show
+    0%
+        opacity: 0
+        left: 75%
+
+    100%
+        opacity: 1
+        left: 0
