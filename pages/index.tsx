@@ -1,11 +1,13 @@
 import { GetStaticProps } from "next"
 import BasePage from "@components/templates/BasePage"
 import Customers from "@components/templates/Customers"
+import Footer from "@components/templates/Footer"
 
 export default function Home() {
     return (
         <BasePage>
             <Customers />
+            <Footer />
         </BasePage>
     )
 }
