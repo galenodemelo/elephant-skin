@@ -2,6 +2,7 @@ import Image from "next/image"
 import Cities from "./Cities"
 import styles from "./Footer.module.sass"
 import HelperLinks from "./HelperLinks"
+import NearestOffice from "./NearestOffice"
 import SocialLinks from "./SocialLinks"
 
 export default function Footer() {
@@ -31,6 +32,7 @@ export default function Footer() {
                         <HelperLinks />
                     </div>
                 </div>
+                <NearestOffice />
             </div>
         </section>
     )
