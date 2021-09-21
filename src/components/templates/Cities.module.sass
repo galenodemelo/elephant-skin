@@ -1,6 +1,7 @@
 .cities
     display: flex
     color: var(--white-color)
+    justify-content: inherit
     
     .city
         margin-top: 24px
@@ -10,6 +11,9 @@
         &:first-of-type
             padding-left: 0
             border-left: none
+
+        &:last-of-type
+            padding-right: 0
 
         .name
             display: block
