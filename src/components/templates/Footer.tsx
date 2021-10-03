@@ -1,3 +1,4 @@
+import PoppingLetters from "@components/animated/PoppingLetters"
 import Image from "next/image"
 import Cities from "./Cities"
 import styles from "./Footer.module.sass"
@@ -17,6 +18,10 @@ export default function Footer() {
                     <div className={styles.header}>
                         <h2 className={styles.heading}>
                             <small className={styles.headingFirst}>Be An</small>
+                            
+                            <PoppingLetters className={styles.headingSecond}>
+                                Elephant
+                            </PoppingLetters>
                         </h2>
                         <p className={styles.subheading}>
                             Ready to work with us? Check it out the open positions!
