@@ -16,8 +16,7 @@ export default function Footer() {
                 <div>
                     <div className={styles.header}>
                         <h2 className={styles.heading}>
-                            <small>Be An</small>
-                            <span>Elephant</span>
+                            <small className={styles.headingFirst}>Be An</small>
                         </h2>
                         <p className={styles.subheading}>
                             Ready to work with us? Check it out the open positions!
