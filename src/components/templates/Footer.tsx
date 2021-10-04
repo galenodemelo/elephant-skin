@@ -6,7 +6,11 @@ import HelperLinks from "./HelperLinks"
 import NearestOffice from "./NearestOffice"
 import SocialLinks from "./SocialLinks"
 
-export default function Footer() {
+type Props = {
+    isActive: boolean
+}
+
+export default function Footer({ isActive }: Props) {
     return (
         <section className={styles.footer}>
             <div className={styles.background}>
@@ -18,8 +22,7 @@ export default function Footer() {
                     <div className={styles.header}>
                         <h2 className={styles.heading}>
                             <small className={styles.headingFirst}>Be An</small>
-                            
-                            <PoppingLetters className={styles.headingSecond}>
+                            <PoppingLetters className={styles.headingSecond} triggerAnimation={isActive} animationDelay={1500}>
                                 Elephant
                             </PoppingLetters>
                         </h2>

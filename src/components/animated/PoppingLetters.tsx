@@ -2,19 +2,27 @@ import anime from "animejs"
 import { useEffect, useRef } from "react";
 
 type Props = {
+    animationDelay: number,
     className: string,
-    children: string
+    children: string,
+    triggerAnimation: boolean
 }
 
-export default function PoppingLetters({className, children}: Props) {
+export default function PoppingLetters({className, children, triggerAnimation = false, animationDelay = 0}: Props) {
     const textRef = useRef()
 
     useEffect(() => {
-        animateHeadingSecond(textRef)
-    }, [textRef])
+        if (triggerAnimation) {
+            setTimeout(() => {
+                if (!textRef.current || textRef.current.style.visibility == "visible") return
+                animateHeadingSecond(textRef)
+                textRef.current.style.visibility = "visible"
+            }, animationDelay)
+        }
+    }, [textRef, triggerAnimation])
 
     return (
-        <div ref={textRef} className={className}>
+        <div ref={textRef} className={className} style={{visibility: "hidden"}}>
             {children}
         </div>
     )
