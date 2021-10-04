@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function PoppingLetters({className, children, triggerAnimation = false, animationDelay = 0}: Props) {
-    const textRef = useRef()
+    const textRef = useRef<HTMLDivElement>()
 
     useEffect(() => {
         if (triggerAnimation) {

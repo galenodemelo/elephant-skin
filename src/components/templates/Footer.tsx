@@ -7,7 +7,7 @@ import NearestOffice from "./NearestOffice"
 import SocialLinks from "./SocialLinks"
 
 type Props = {
-    isActive: boolean
+    isActive?: boolean
 }
 
 export default function Footer({ isActive }: Props) {
