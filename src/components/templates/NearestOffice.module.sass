@@ -1,3 +1,5 @@
+@import "@styles/animations"
+
 .nearestOffice
     display: inline-flex
     flex-direction: column
@@ -10,6 +12,11 @@
         font-size: 1.2rem
         letter-spacing: .1rem
         line-height: 1
+        animation-play-state: paused
+        animation-name: fade-in-left
+        animation-timing-function: linear
+        animation-duration: 2s
+        animation-fill-mode: forwards
 
     .officeName
         color: var(--pink-color)
@@ -17,8 +24,18 @@
         font-size: 3rem
         text-transform: uppercase
         line-height: 1
+        animation-play-state: paused
+        animation-name: fade-in-left
+        animation-timing-function: linear
+        animation-duration: 1s
+        animation-fill-mode: forwards
 
     .time
         color: var(--white-color)
         font-family: var(--font-aaux)
         font-size: 1.2rem
+
+    &[data-active="true"]
+        .heading,
+        .officeName
+            animation-play-state: running

@@ -1,8 +1,12 @@
 import styles from "./NearestOffice.module.sass"
 
-export default function NearestOffice() {
+type Props = {
+    triggerAnimation?: boolean
+}
+
+export default function NearestOffice({triggerAnimation = true}: Props) {
     return (
-        <div className={styles.nearestOffice}>
+        <div className={styles.nearestOffice} data-active={triggerAnimation}>
             <h6 className={styles.heading}>
                 Nearest office
             </h6>

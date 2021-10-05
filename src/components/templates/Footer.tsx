@@ -39,7 +39,7 @@ export default function Footer({ isActive }: Props) {
                         <HelperLinks />
                     </div>
                 </div>
-                <NearestOffice />
+                <NearestOffice triggerAnimation={isActive} />
             </div>
         </section>
     )
