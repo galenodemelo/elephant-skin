@@ -25,6 +25,7 @@ export default function BasePage({ children }: Props) {
             onSlideChangeTransitionEnd={setSlideAsActive}
             preloadImages={true}
             slidesPerView={1}
+            speed={800}
         >
             {children.map((child: JSX.Element, index: number) => {
                 return (
