@@ -1,4 +1,5 @@
 import styles from "./HighlightedProjects.module.sass"
+import HighlightedProjectsItem from "./HighlightedProjectsItem"
 
 export default function HighlightedProjects() {
     return (
@@ -20,6 +21,17 @@ export default function HighlightedProjects() {
                         <span>Proud!</span>
                     </div>
                 </header>
+
+                <nav className={styles.projectList}>
+                    <HighlightedProjectsItem />
+                    <HighlightedProjectsItem />
+
+                    <div className={styles.more}>
+                        <a href="#" className="btn btn--pink">
+                            All stories
+                        </a>
+                    </div>
+                </nav>
             </div>
         </section>
     )
