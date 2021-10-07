@@ -18,6 +18,10 @@
         display: flex
         align-items: center
         justify-content: center
+        transition: opacity .4s ease
+
+        &[data-visible="false"]
+            opacity: 0
 
         .lettering
             font-family: var(--font-etna)

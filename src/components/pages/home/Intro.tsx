@@ -4,15 +4,24 @@ import styles from "./Intro.module.sass"
 
 export default function Intro() {
     const videoPlayer = useRef<HTMLVideoElement>()
-    const [videoPlayerFocusState, setVideoPlayerFocusState] = useState(true)
+    const [soundExperienceState, setSoundExperienceState] = useState(false)
     
+    function toggleSoundExperience(state?: boolean) {
+        if (state !== null) {
+            setSoundExperienceState(state)
+            return
+        }
+
+        setSoundExperienceState(!soundExperienceState)
+    }
+
     return (
-        <section className={styles.intro}>
-            <video autoPlay={true} muted={true} className={styles.background} ref={videoPlayer} loop={true}>
+        <section className={styles.intro} data-sound-experience={soundExperienceState} onClick={() => toggleSoundExperience(null)}>
+            <video autoPlay={true} muted={!soundExperienceState} className={styles.background} ref={videoPlayer} loop={true}>
                 <source src="/video/home/intro.webm" type="video/webm" />
             </video>
 
-            <div className={styles.content}>
+            <div className={styles.content} data-visible={!soundExperienceState}>
                 <div className="grid-centered">
                     <h1 className={styles.lettering}>
                         <span>The</span>
