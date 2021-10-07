@@ -10,6 +10,18 @@ export default function Intro() {
             <video autoPlay={true} muted={true} className={styles.background} ref={videoPlayer} loop={true}>
                 <source src="/video/home/intro.webm" type="video/webm" />
             </video>
+
+            <div className={styles.content}>
+                <div className="grid-centered">
+                    <h1 className={styles.lettering}>
+                        <span>The</span>
+                        <span>world</span>
+                        <span>is full of dogs,</span>
+                        <span>be an</span>
+                        <span>elephant!</span>
+                    </h1>
+                </div>
+            </div>
         </section>
     )
 }
