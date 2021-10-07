@@ -1,3 +1,4 @@
+import Cities from "@components/templates/Cities"
 import { useRef, useState } from "react"
 import styles from "./Intro.module.sass"
 
@@ -20,6 +21,10 @@ export default function Intro() {
                         <span>be an</span>
                         <span>elephant!</span>
                     </h1>
+
+                    <div className={styles.cityList}>
+                        <Cities />
+                    </div>
                 </div>
             </div>
         </section>
