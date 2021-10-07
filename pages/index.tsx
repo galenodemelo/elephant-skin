@@ -3,10 +3,12 @@ import BasePage from "@components/templates/BasePage"
 import Customers from "@components/templates/Customers"
 import Footer from "@components/templates/Footer"
 import HighlightedProjects from "@components/templates/HighlightedProjects"
+import Intro from "@components/pages/home/Intro"
 
 export default function Home() {
     return (
         <BasePage>
+            <Intro />
             <HighlightedProjects />
             <Customers />
             <Footer />
