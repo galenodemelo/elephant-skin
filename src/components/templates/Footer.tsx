@@ -14,7 +14,7 @@ export default function Footer({ isActive }: Props) {
     return (
         <section className={styles.footer}>
             <div className={styles.background}>
-                <Image src="/img/decorative/world-map.png" layout="fill" objectFit="contain" objectPosition="left bottom" />
+                <Image src="/img/decorative/world-map.png" layout="fill" objectFit="contain" objectPosition="left bottom" loading="eager" />
             </div>
 
             <div className={[styles.content, "grid-centered"].join(" ")}>
