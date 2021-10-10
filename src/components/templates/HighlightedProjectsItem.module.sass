@@ -1,0 +1,45 @@
+.highlightedProjectsItem
+    position: relative
+    display: block
+    height: 400px
+    max-height: 34vh
+
+    .info
+        display: flex
+        justify-content: flex-end
+        flex-direction: column
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        box-sizing: border-box
+        padding: 32px
+
+        .title
+            color: var(--white-color)
+            line-height: 1.2
+
+            small
+                display: block
+                font-size: 1rem
+                font-family: var(--font-aaux)
+
+            span
+                font-size: 1.6rem
+                font-family: var(--font-etna)
+                text-transform: uppercase
+                letter-spacing: 1px
+
+        .description
+            margin-top: 6px
+            font-family: var(--font-aaux)
+            color: var(--white-color)
+
+            &::before
+                margin-bottom: 6px
+                display: block
+                width: 100%
+                content: ""
+                height: 1px
+                background-color: var(--white-color)

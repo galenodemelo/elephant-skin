@@ -27,6 +27,7 @@ export default function BasePage({ children }: Props) {
             preloadImages={true}
             speed={800}
             slidesPerView={1}
+            speed={800}
         >
             {children.map((child: JSX.Element, index: number) => {
                 return (
