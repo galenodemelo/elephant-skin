@@ -17,7 +17,7 @@ export default function NearestOffice({triggerAnimation = true}: Props) {
                 5:12 pm
             </time>
             
-            <a href="#" className="btn btn--ghost">
+            <a href="#" className={[styles.allOffices, "btn", "btn--ghost"].join(" ")}>
                 All offices
             </a>
         </div>

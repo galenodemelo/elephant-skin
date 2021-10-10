@@ -12,11 +12,8 @@
         font-size: 1.2rem
         letter-spacing: .1rem
         line-height: 1
-        animation-play-state: paused
-        animation-name: fade-in-left
-        animation-timing-function: linear
         animation-duration: 2s
-        animation-fill-mode: forwards
+        animation-delay: 1s
 
     .officeName
         color: var(--pink-color)
@@ -24,18 +21,39 @@
         font-size: 3rem
         text-transform: uppercase
         line-height: 1
-        animation-play-state: paused
-        animation-name: fade-in-left
-        animation-timing-function: linear
-        animation-duration: 1s
-        animation-fill-mode: forwards
+        animation-duration: 1.4s
+        animation-delay: 1.4s
 
     .time
         color: var(--white-color)
         font-family: var(--font-aaux)
         font-size: 1.2rem
+        animation-duration: 4s
+        animation-delay: 1.4s
+
+    .heading,
+    .officeName,
+    .time
+        animation-play-state: paused
+        animation-name: fade-in-left
+        animation-timing-function: linear
+        animation-fill-mode: forwards
+        width: 0
+        overflow: hidden
+        white-space: nowrap
+
+    .allOffices
+        animation-play-state: paused
+        animation-name: scale-in
+        animation-timing-function: ease
+        animation-fill-mode: forwards
+        animation-duration: .8s
+        animation-delay: 3.5s
+        transform: scale(0)
 
     &[data-active="true"]
         .heading,
-        .officeName
+        .officeName,
+        .time,
+        .allOffices
             animation-play-state: running
