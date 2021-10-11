@@ -34,7 +34,7 @@ export default function Footer({ isActive }: Props) {
                         </a>
                     </div>
                     <div className={styles.helper}>
-                        <SocialLinks />
+                        <SocialLinks triggerAnimation={isActive} />
                         <Cities />
                         <HelperLinks />
                     </div>
