@@ -1,7 +1,16 @@
+@import "@styles/animations"
+    
 .cities
     display: flex
     color: var(--white-color)
     justify-content: inherit
+    animation-play-state: paused
+    animation-name: slide-in-bottom
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+    animation-duration: .8s
+    animation-delay: 4s
+    opacity: 0
     
     .city
         margin-top: 24px
@@ -28,3 +37,6 @@
             white-space: nowrap
             font-family: var(--font-aaux)
             font-size: 1rem
+
+    &[data-active="true"]
+        animation-play-state: running

@@ -5,6 +5,7 @@ import { Mousewheel } from "swiper"
 import "swiper/css"
 import "swiper/css/mousewheel"
 import { SwiperModule } from "swiper/types"
+import React from "react"
 
 type Props = {
     children: JSX.Element[]
@@ -24,13 +25,13 @@ export default function BasePage({ children }: Props) {
             onInit={setSlideAsActive}
             onSlideChangeTransitionEnd={setSlideAsActive}
             preloadImages={true}
-            slidesPerView={1}
             speed={800}
+            slidesPerView={1}
         >
             {children.map((child: JSX.Element, index: number) => {
                 return (
                     <SwiperSlide key={index}>
-                        {child}
+                        {({isActive}) => React.cloneElement(child, { isActive })}
                     </SwiperSlide>
                 )
             })}

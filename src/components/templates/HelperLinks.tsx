@@ -1,9 +1,13 @@
 import Image from "next/image"
 import styles from "./HelperLinks.module.sass"
 
-export default function HelperLinks() {
+type Props = {
+    triggerAnimation?: boolean
+}
+
+export default function HelperLinks({triggerAnimation = true}: Props) {
     return (
-        <div className={styles.helperLinks}>
+        <div className={styles.helperLinks} data-active={triggerAnimation}>
             <nav className={styles.links}>
                 <a href="#">Disclaimer</a>
                 <a href="#">Privacy</a>
