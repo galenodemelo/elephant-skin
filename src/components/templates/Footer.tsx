@@ -35,8 +35,8 @@ export default function Footer({ isActive }: Props) {
                     </div>
                     <div className={styles.helper}>
                         <SocialLinks triggerAnimation={isActive} />
-                        <Cities />
-                        <HelperLinks />
+                        <Cities triggerAnimation={isActive} />
+                        <HelperLinks triggerAnimation={isActive} />
                     </div>
                 </div>
                 <NearestOffice triggerAnimation={isActive} />

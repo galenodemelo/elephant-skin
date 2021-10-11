@@ -10,7 +10,11 @@ const cityList: {name: string, timeZone: string}[] = [
     {name: "SHA", timeZone: "America/Sao_Paulo"}
 ]
 
-export default function Cities() {
+type Props = {
+    triggerAnimation?: boolean
+}
+
+export default function Cities({triggerAnimation = true}: Props) {
     const refreshTimeInSeconds: number = 15
     const [currentDate, setCurrentDate] = useState<Date>(new Date())
 
@@ -21,7 +25,7 @@ export default function Cities() {
     }, [currentDate])
 
     return (
-        <ul className={styles.cities}>
+        <ul className={styles.cities} data-active={triggerAnimation}>
             {cityList.map((city, index) => {
                 return (
                     <li className={styles.city} key={index}>

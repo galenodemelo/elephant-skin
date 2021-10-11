@@ -1,3 +1,5 @@
+@import "@styles/animations"
+    
 .helperLinks
     margin-top: 32px
     color: var(--white-color)
@@ -7,6 +9,7 @@
         display: flex
         column-gap: 16px
         justify-content: inherit
+        animation-delay: 6s
         
         > a
             font-family: var(--font-aaux)
@@ -22,3 +25,18 @@
         color: var(--white-color)
         font-family: var(--font-etna)
         font-size: 1rem
+        animation-delay: 6.5s
+
+    .links,
+    .copyright
+        animation-play-state: paused
+        animation-name: slide-in-bottom
+        animation-timing-function: ease
+        animation-fill-mode: forwards
+        animation-duration: .8s
+        opacity: 0
+
+    &[data-active]
+        .links,
+        .copyright
+            animation-play-state: running
