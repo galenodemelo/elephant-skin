@@ -33,7 +33,7 @@
                     animation-play-state: paused
                     animation-name: fade-in-left
                     animation-timing-function: linear
-                    animation-duration: 2s
+                    animation-duration: 1.4s
                     animation-fill-mode: forwards
 
                     &::before
@@ -50,6 +50,22 @@
                 color: var(--white-color)
                 font-family: var(--font-aaux)
                 font-size: 1rem
+                animation-play-state: paused
+                animation-name: fade-in
+                animation-timing-function: linear
+                animation-fill-mode: forwards
+                animation-duration: .6s
+                animation-delay: 2s
+                opacity: 0
+
+            .careers
+                animation-play-state: paused
+                animation-name: scale-in
+                animation-timing-function: linear
+                animation-fill-mode: forwards
+                animation-duration: .8s
+                animation-delay: 2.4s
+                transform: scale(0)
 
         .helper
             margin-top: -24px
@@ -59,5 +75,9 @@
             justify-content: flex-end
 
     &[data-active="true"]
-        .content .header .heading .headingFirst
-            animation-play-state: running
+        .content 
+            .header 
+                .heading .headingFirst,
+                .subheading,
+                .careers
+                    animation-play-state: running

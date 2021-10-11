@@ -29,7 +29,7 @@ export default function Footer({ isActive }: Props) {
                         <p className={styles.subheading}>
                             Ready to work with us? Check it out the open positions!
                         </p>
-                        <a href="#" className="btn btn--pink">
+                        <a href="#" className={[styles.careers, "btn", "btn--pink"].join(" ")}>
                             Careers
                         </a>
                     </div>
