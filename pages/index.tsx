@@ -4,11 +4,13 @@ import Customers from "@components/templates/Customers"
 import Footer from "@components/templates/Footer"
 import HighlightedProjects from "@components/templates/HighlightedProjects"
 import Intro from "@components/pages/home/Intro"
+import Concept from "@components/pages/home/Concept"
 
 export default function Home() {
     return (
         <BasePage>
             <Intro />
+            <Concept />
             <HighlightedProjects />
             <Customers />
             <Footer />
