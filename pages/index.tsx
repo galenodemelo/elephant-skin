@@ -5,12 +5,14 @@ import Footer from "@components/templates/Footer"
 import HighlightedProjects from "@components/templates/HighlightedProjects"
 import Intro from "@components/pages/home/Intro"
 import Concept from "@components/pages/home/Concept"
+import Facade from "@components/pages/home/Facade"
 
 export default function Home() {
     return (
         <BasePage>
             <Intro />
             <Concept />
+            <Facade />
             <HighlightedProjects />
             <Customers />
             <Footer />
