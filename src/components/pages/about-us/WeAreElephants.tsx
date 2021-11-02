@@ -1,3 +1,4 @@
+import Image from "next/image"
 import styles from "./WeAreElephants.module.sass"
 
 export default function WeAreElephants() {
@@ -24,6 +25,14 @@ export default function WeAreElephants() {
                         Animation
                     </li>
                 </ul>
+                <div className={styles.elephant}>
+                    <div className={styles.background}>
+                        <Image src="/img/decorative/pink-brush-background.png" layout="fill" objectFit="contain" />
+                    </div>
+                    <div className={styles.animation}>
+                        <Image src="/img/decorative/elephant-draw-scientist-dropper.gif" layout="fill" objectFit="contain" />
+                    </div>
+                </div>
             </div>
         </section>
     )
