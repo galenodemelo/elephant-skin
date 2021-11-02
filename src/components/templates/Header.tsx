@@ -16,7 +16,7 @@ export default function Header() {
         <header className={headerClassNameList.join(" ")}>
             <div className={[styles.bar, "grid-centered"].join(" ")}>
                 <div className={styles.logo}>
-                    <a href="#">
+                    <a href="/">
                         <Image src="/img/elephant-skin-logo.svg" layout="fill" alt="Elephant Skin pink logo, composed by a lettering and an elephant icon at the end" />
                     </a>
                 </div>
@@ -37,7 +37,7 @@ export default function Header() {
                     </div>
 
                     <nav className={styles.nav}>
-                        <a href="#" className={styles.link}>
+                        <a href="/aboutUs" className={styles.link}>
                             Hello
                         </a>
                         <a href="#" className={styles.link}>
