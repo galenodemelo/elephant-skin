@@ -1,4 +1,5 @@
 import Cities from "./Cities"
+import Link from "next/link"
 import Image from "next/image"
 import SocialLinks from "./SocialLinks"
 
@@ -16,9 +17,9 @@ export default function Header() {
         <header className={headerClassNameList.join(" ")}>
             <div className={[styles.bar, "grid-centered"].join(" ")}>
                 <div className={styles.logo}>
-                    <a href="/">
+                    <Link href="/">
                         <Image src="/img/elephant-skin-logo.svg" layout="fill" alt="Elephant Skin pink logo, composed by a lettering and an elephant icon at the end" />
-                    </a>
+                    </Link>
                 </div>
 
                 <button className={styles.button} onClick={() => setOpened(!opened)}>
@@ -37,21 +38,31 @@ export default function Header() {
                     </div>
 
                     <nav className={styles.nav}>
-                        <a href="/aboutUs" className={styles.link}>
-                            Hello
-                        </a>
-                        <a href="#" className={styles.link}>
-                            Stories
-                        </a>
-                        <a href="#" className={styles.link}>
-                            Moodboard
-                        </a>
-                        <a href="#" className={styles.link}>
-                            Careers
-                        </a>
-                        <a href="#" className={styles.link}>
-                            Contact
-                        </a>
+                        <Link href="/aboutUs">
+                            <a className={styles.link} onClick={() => setOpened(false)}>
+                                Hello
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.link} onClick={() => setOpened(false)}>
+                                Stories
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.link} onClick={() => setOpened(false)}>
+                                Moodboard
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.link} onClick={() => setOpened(false)}>
+                                Careers
+                            </a>
+                        </Link>
+                        <Link href="#">
+                            <a className={styles.link} onClick={() => setOpened(false)}>
+                                Contact
+                            </a>
+                        </Link>
                     </nav>
                 </div>
             </div>
