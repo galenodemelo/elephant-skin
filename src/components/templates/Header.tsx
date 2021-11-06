@@ -25,7 +25,7 @@ export default function Header() {
                 <button className={styles.button} onClick={() => setOpened(!opened)}>
                     {!opened 
                         ? <Image src="/img/icons/menu-animation.gif" layout="fill" alt="Bars animation growing and shrinking" />
-                        : <Image src="/img/icons/close.svg?" layout="fill" alt="X icon" />}
+                        : <Image src="/img/icons/close.svg" layout="fill" alt="X icon" />}
                 </button>
             </div>
 
