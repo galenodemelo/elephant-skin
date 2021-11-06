@@ -1,5 +1,6 @@
 import Intro from "@components/pages/about-us/Intro"
 import Manifesto from "@components/pages/about-us/manifesto/Manifesto"
+import MeetTheElephants from "@components/pages/about-us/MeetTheElephants"
 import WeAreElephants from "@components/pages/about-us/WeAreElephants"
 import BasePage from "@components/templates/BasePage"
 import { GetStaticProps } from "next"
@@ -10,6 +11,7 @@ export default function AboutUs() {
             <Intro />
             <WeAreElephants />
             <Manifesto />
+            <MeetTheElephants />
         </BasePage>
     )
 }
