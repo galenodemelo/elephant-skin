@@ -1,0 +1,55 @@
+.manifesto
+
+    .container
+        display: flex
+        align-items: center
+        width: 1080px
+        height: 100%
+
+        .slideContainer
+            flex: 4
+            margin-top: var(--navbar-height)
+
+        .control
+            flex: 1
+            display: inline-flex
+            flex-direction: column
+            align-items: flex-end
+            gap: 24px
+
+            .controlItem
+                width: 80px
+                height: 80px
+                background-color: var(--gray-color)
+                border-radius: 100%
+                font-size: 4rem
+                line-height: 94px
+                font-family: var(--font-etna)
+                color: var(--white-color)
+                text-align: center
+                vertical-align: middle
+                text-indent: -4px
+                transition: background-color .4s ease, transform .4s ease
+
+                &--active,
+                &:hover
+                    background-color: var(--pink-color)
+                    cursor: pointer
+                    transform: scale(1.3)
+
+        .info
+            flex: 1
+
+            .rotatedText
+                transform: rotate(-90deg)
+                white-space: nowrap
+                font-family: var(--font-aaux)
+                font-size: 1rem
+                line-height: 1
+
+                em
+                    margin-left: 4px
+                    font-style: normal
+                    font-weight: normal
+                    text-transform: uppercase
+                    color: var(--pink-color)
