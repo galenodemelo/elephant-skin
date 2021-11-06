@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import styles from "./Manifesto.module.sass"
 
+import TheJourney from "./slides/TheJourney"
 export default function Manifesto() {
     const [currentIndex, setCurrentState] = useState(0)
 
     const slideList: JSX.Element[] = [
+        TheJourney({ active: false }),
     ]
 
     const controlItems: JSX.Element[] = []
