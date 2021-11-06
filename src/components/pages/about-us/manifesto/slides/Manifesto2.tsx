@@ -12,9 +12,9 @@ export default function Manifesto2(props: SlideProps) {
                 </button>
 
                 <div className={styles.text}>
-                    Don't <br />
+                    Don{"'"}t <br />
                     grow up. <br />
-                    It's a <br />
+                    It{"'"}s a <br />
                     trap!
                 </div>
 
