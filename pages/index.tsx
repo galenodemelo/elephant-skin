@@ -1,8 +1,5 @@
 import { GetStaticProps } from "next"
 import BasePage from "@components/templates/BasePage"
-import Customers from "@components/templates/Customers"
-import Footer from "@components/templates/Footer"
-import HighlightedProjects from "@components/templates/HighlightedProjects"
 import Intro from "@components/pages/home/Intro"
 import Concept from "@components/pages/home/Concept"
 import Facade from "@components/pages/home/Facade"
@@ -13,9 +10,6 @@ export default function Home() {
             <Intro />
             <Concept />
             <Facade />
-            <HighlightedProjects />
-            <Customers />
-            <Footer />
         </BasePage>
     )
 }
