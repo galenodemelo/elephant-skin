@@ -1,7 +1,13 @@
+import Hero from "@components/pages/contact/Hero";
+import BasePage from "@components/templates/BasePage";
 import { GetStaticProps } from "next";
 
 export default function Contact() {
     return (
+        <BasePage>
+            <Hero />
+        </BasePage>
+    )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
