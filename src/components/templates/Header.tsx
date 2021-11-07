@@ -43,7 +43,7 @@ export default function Header() {
                                 Hello
                             </a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/stories">
                             <a className={styles.link} onClick={() => setOpened(false)}>
                                 Stories
                             </a>
