@@ -1,5 +1,6 @@
+import Link from "next/link"
 import styles from "./HighlightedProjects.module.sass"
-import HighlightedProjectsItem from "./HighlightedProjectsItem"
+import ProjectList from "./ProjectList"
 
 export default function HighlightedProjects() {
     return (
@@ -22,16 +23,15 @@ export default function HighlightedProjects() {
                     </div>
                 </header>
 
-                <nav className={styles.projectList}>
-                    <HighlightedProjectsItem />
-                    <HighlightedProjectsItem />
+                <ProjectList projectList={new Array(2).fill(0)} />
 
-                    <div className={styles.more}>
-                        <a href="#" className="btn btn--pink">
+                <div className="content-centered">
+                    <Link href="/stories">
+                        <a className="btn btn--pink">
                             All stories
                         </a>
-                    </div>
-                </nav>
+                    </Link>
+                </div>
             </div>
         </section>
     )
