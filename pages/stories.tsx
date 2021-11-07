@@ -1,7 +1,12 @@
+import Hero from "@components/pages/stories/Hero"
+import BasePage from "@components/templates/BasePage"
 import { GetStaticProps } from "next"
 
 export default function Stories() {
     return (
+        <BasePage>
+            <Hero />
+        </BasePage>
     )
 }
 
