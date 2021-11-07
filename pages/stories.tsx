@@ -1,4 +1,5 @@
 import Hero from "@components/pages/stories/Hero"
+import List from "@components/pages/stories/List"
 import BasePage from "@components/templates/BasePage"
 import { GetStaticProps } from "next"
 
@@ -6,6 +7,7 @@ export default function Stories() {
     return (
         <BasePage>
             <Hero />
+            <List />
         </BasePage>
     )
 }

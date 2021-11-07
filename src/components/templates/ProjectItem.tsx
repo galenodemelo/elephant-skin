@@ -1,9 +1,9 @@
 import Image from "next/image"
-import styles from "./HighlightedProjectsItem.module.sass"
+import styles from "./ProjectItem.module.sass"
 
-export default function HighlightedProjectsItem() {
+export default function ProjectItem() {
     return (
-        <a href="#" className={styles.highlightedProjectsItem}>
+        <a href="#" className={styles.projectItem}>
             <Image src="/img/projects/example.jpg" layout="fill" objectFit="cover" />
 
             <div className={styles.info}>
