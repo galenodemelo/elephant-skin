@@ -58,7 +58,7 @@ export default function Header() {
                                 Careers
                             </a>
                         </Link>
-                        <Link href="#">
+                        <Link href="/contact">
                             <a className={styles.link} onClick={() => setOpened(false)}>
                                 Contact
                             </a>
