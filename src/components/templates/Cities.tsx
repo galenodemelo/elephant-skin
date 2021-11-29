@@ -15,6 +15,7 @@ type Props = {
     fullname?: boolean,
     pinIcon?: boolean,
     triggerAnimation?: boolean
+    timeZoneDescription?: boolean
 }
 
 export default function Cities({fullname = false, pinIcon = false, triggerAnimation = true, timeZoneDescription = false}: Props) {
@@ -42,6 +43,7 @@ export default function Cities({fullname = false, pinIcon = false, triggerAnimat
                         </b>
                         <time className={styles.time}>
                             {getCurrentTime(currentDate, city.timeZone)}
+                            {timeZoneDescription && <span><br />{city.timeZoneDescription}</span>}
                         </time>
                     </li>
                 )
