@@ -1,4 +1,5 @@
 import Hero from "@components/pages/contact/Hero";
+import Location from "@components/pages/contact/Location";
 import BasePage from "@components/templates/BasePage";
 import { GetStaticProps } from "next";
 
@@ -6,6 +7,7 @@ export default function Contact() {
     return (
         <BasePage>
             <Hero />
+            <Location />
         </BasePage>
     )
 }
