@@ -11,10 +11,11 @@ const cityList: {name: string, timeZone: string}[] = [
 ]
 
 type Props = {
+    pinIcon?: boolean,
     triggerAnimation?: boolean
 }
 
-export default function Cities({triggerAnimation = true}: Props) {
+export default function Cities({fullname = false, pinIcon = false, triggerAnimation = true, timeZoneDescription = false}: Props) {
     const refreshTimeInSeconds: number = 15
     const [currentDate, setCurrentDate] = useState<Date>(new Date())
 
@@ -29,6 +30,11 @@ export default function Cities({triggerAnimation = true}: Props) {
             {cityList.map((city, index) => {
                 return (
                     <li className={styles.city} key={index}>
+                        {pinIcon &&
+                            <div className={styles.icon}>
+                                <Image src="/img/icons/pin.svg" alt="Map pin icon" layout="fill" />
+                            </div>
+                        }
                         <b className={styles.name}>
                             {city.name}
                         </b>
