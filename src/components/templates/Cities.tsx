@@ -1,16 +1,18 @@
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import styles from "./Cities.module.sass"
 
-const cityList: {name: string, timeZone: string}[] = [
-    {name: "Van", timeZone: "America/Vancouver"},
-    {name: "LA", timeZone: "America/Los_Angeles"},
-    {name: "NYC", timeZone: "America/New_York"},
-    {name: "MIA", timeZone: "America/New_York"},
-    {name: "SP", timeZone: "America/Sao_Paulo"},
-    {name: "SHA", timeZone: "America/Sao_Paulo"}
+const cityList: {name: string, fullName: string, timeZone: string, timeZoneDescription: string}[] = [
+    {name: "Van", fullName: "Vancouver", timeZone: "America/Vancouver", timeZoneDescription: "PST / GMT-8"},
+    {name: "LA", fullName: "Los Angeles", timeZone: "America/Los_Angeles", timeZoneDescription: "PST / GMT-8"},
+    {name: "NYC", fullName: "New York", timeZone: "America/New_York", timeZoneDescription: "EST / GMT-5"},
+    {name: "MIA", fullName: "Miami", timeZone: "America/New_York", timeZoneDescription: "EST / GMT-5"},
+    {name: "SP", fullName: "São Paulo", timeZone: "America/Sao_Paulo", timeZoneDescription: "BRT / GMT-3"},
+    {name: "SHA", fullName: "Shangai", timeZone: "Asia/Shanghai", timeZoneDescription: "CST / GMT+8"}
 ]
 
 type Props = {
+    fullname?: boolean,
     pinIcon?: boolean,
     triggerAnimation?: boolean
 }
@@ -36,7 +38,7 @@ export default function Cities({fullname = false, pinIcon = false, triggerAnimat
                             </div>
                         }
                         <b className={styles.name}>
-                            {city.name}
+                            {fullname ? city.fullName : city.name}
                         </b>
                         <time className={styles.time}>
                             {getCurrentTime(currentDate, city.timeZone)}
