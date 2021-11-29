@@ -17,7 +17,7 @@ export default function HelperLinks({triggerAnimation = true}: Props) {
 
             <div className={styles.copyright}>
                 <div>&copy; All rights reserved to Elephan Skin LLC</div>
-                <Image src="/img/elephant-skin-picto.svg" width="32" height="32" />
+                <Image src="/img/elephant-skin-picto-white.svg" width="32" height="32" />
             </div>
         </div>
     )

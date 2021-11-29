@@ -13,6 +13,7 @@
     opacity: 0
     
     .city
+        width: 100%
         margin-top: 24px
         padding: 6px 16px
         border-left: var(--white-color) solid 1px
@@ -23,6 +24,15 @@
 
         &:last-of-type
             padding-right: 0
+
+        .icon
+            margin: 0 auto 16px
+            position: relative
+            width: 16px
+            height: 16px
+
+            &:hover
+                fill: var(--primary-color)
 
         .name
             display: block

@@ -18,7 +18,7 @@ export default function Concept() {
                         <p>We are thinkers and doers that transform real estate into masterpieces!”</p>
                     </div>
                     <div className={styles.picto}>
-                        <Image src="/img/elephant-skin-picto.svg" layout="fill" />
+                        <Image src="/img/elephant-skin-picto-white.svg" layout="fill" />
                     </div>
                 </div>
             </div>
