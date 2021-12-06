@@ -4,10 +4,10 @@ import styles from "./Customers.module.sass"
 export default function Customers() {
     return (
         <section className={styles.customers}>
-            <div className={styles.banner}>
+            <div className={styles.banner} data-play-on-active>
                 <Image src="/img/decorative/elephant-draw-customers.png" layout="fill" objectFit="cover" objectPosition="right top" /> 
             </div>
-            <ul className={styles.customerList} swiper-not-scrollable="true">
+            <ul className={styles.customerList} swiper-not-scrollable="true" data-play-on-active>
                 {[...Array(24)].map((_, i) => {
                     return (
                         <li key={i}>
@@ -16,7 +16,7 @@ export default function Customers() {
                     )
                 })}
             </ul>
-            <h2 className={styles.heading}>
+            <h2 className={styles.heading} data-play-on-active>
                 They chose to be an Elephant.
             </h2>
         </section>

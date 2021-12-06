@@ -44,6 +44,10 @@
     &:hover
         transform: scale(1.2)
 
+*[data-active="true"]
+    &[data-play-on-active="true"],
+    *[data-play-on-active="true"]
+        animation-play-state: running !important
 
 .grid-centered
     margin: 0 auto

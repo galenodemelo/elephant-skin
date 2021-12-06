@@ -29,7 +29,7 @@ export default function Cities({fullname = false, pinIcon = false, triggerAnimat
     }, [currentDate])
 
     return (
-        <ul className={styles.cities} data-active={triggerAnimation}>
+        <ul className={styles.cities} data-active={triggerAnimation} data-play-on-active>
             {cityList.map((city, index) => {
                 return (
                     <li className={styles.city} key={index}>
