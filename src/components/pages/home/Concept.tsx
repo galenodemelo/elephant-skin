@@ -5,7 +5,10 @@ export default function Concept() {
     return (
         <section className={styles.concept}>
             <div className="grid-centered">
-                <div className={styles.quoteSymbol}>
+                <div className={styles.quoteSymbol} data-play-on-active>
+                    <Image src="/img/decorative/quote-symbol.png" layout="fill" />
+                </div>
+                <div className={styles.quoteSymbol} data-play-on-active>
                     <Image src="/img/decorative/quote-symbol.png" layout="fill" />
                 </div>
                 <div className={styles.decorative}>

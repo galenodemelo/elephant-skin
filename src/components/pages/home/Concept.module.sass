@@ -3,9 +3,23 @@
 
     .quoteSymbol
         position: absolute
-        width: 390px
-        height: 288px
+        opacity: 0
         top: 120px
+        animation-play-state: paused
+        animation-name: drop-quote
+        animation-timing-function: ease
+        animation-duration: 1.8s
+        animation-fill-mode: forwards
+
+        &:nth-of-type(1)
+            width: 165px
+            height: 288px
+
+        &:nth-of-type(2)
+            margin-left: 220px
+            width: 165px
+            height: 250px
+            animation-delay: 0.2s
 
     .decorative
         right: 5%
@@ -40,3 +54,16 @@
             width: 40px
             height: 70px
             bottom: 32px
+
+@keyframes drop-quote
+    0%
+        transform: rotate(-90deg) translate(40%, -20%)
+        opacity: 0
+
+    50%
+        transform: rotate(15deg) translate(-10%, 20%)
+        opacity: 1
+
+    100%
+        transform: rotate(0deg) translate(0%, 0%)
+        opacity: 1
