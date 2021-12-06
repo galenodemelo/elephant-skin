@@ -1,3 +1,5 @@
+@import @styles/animations
+    
 .concept
     background-color: var(--pink-color)
 
@@ -45,9 +47,20 @@
             font-size: 1.8rem
             line-height: 1.2
             text-align: center
+            animation-name: slide-in-bottom
+            animation-play-state: paused
+            animation-timing-function: ease
+            animation-duration: 1s
+            animation-delay: .5s
+            animation-fill-mode: forwards
+            opacity: 0
 
             p
                 margin-bottom: 2rem
+
+                small
+                    font-family: var(--font-aaux)
+                    font-size: 1rem
 
         .picto
             position: absolute
