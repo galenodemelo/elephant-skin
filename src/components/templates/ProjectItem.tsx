@@ -3,7 +3,7 @@ import styles from "./ProjectItem.module.sass"
 
 export default function ProjectItem() {
     return (
-        <a href="#" className={styles.projectItem}>
+        <a href="#" className={styles.projectItem} data-play-on-active>
             <Image src="/img/projects/example.jpg" layout="fill" objectFit="cover" />
 
             <div className={styles.info}>

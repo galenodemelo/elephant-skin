@@ -1,3 +1,5 @@
+@import @styles/animations
+
 .highlightedProjects
     padding-top: var(--navbar-height)
 
@@ -14,6 +16,12 @@
                 font-family: var(--font-etna)
                 font-size: 1.4rem
                 text-transform: uppercase
+                animation-name: slide-in-bottom
+                animation-play-state: paused
+                animation-timing-function: ease
+                animation-duration: 1.2s
+                animation-fill-mode: forwards
+                opacity: 0
 
                 &::before
                     margin-left: -.4rem
@@ -26,6 +34,13 @@
                 font-family: var(--font-aaux)
                 line-height: 1.4
                 font-size: 1rem
+                animation-name: slide-in-bottom
+                animation-play-state: paused
+                animation-timing-function: ease
+                animation-duration: 1.2s
+                animation-delay: .5s
+                animation-fill-mode: forwards
+                opacity: 0
 
         .decorative
             margin-right: 40px
@@ -37,8 +52,56 @@
                 color: var(--pink-color)
                 line-height: 1
                 margin: 0 0 48px 120px
+                animation-name: slide-right
+                animation-play-state: paused
+                animation-timing-function: cubic-bezier(.2,.87,.63,.95)
+                animation-duration: 1.2s
+                animation-fill-mode: forwards
+                opacity: 0
 
             span
+                display: block
                 font-size: 12rem
                 text-transform: uppercase
                 line-height: .5
+                animation-name: slide-left
+                animation-play-state: paused
+                animation-timing-function: cubic-bezier(.2,.87,.63,.95)
+                animation-duration: 1.2s
+                animation-delay: .2s
+                animation-fill-mode: forwards
+                opacity: 0
+
+
+    .btn
+        animation-name: scale-in
+        animation-play-state: paused
+        animation-timing-function: ease
+        animation-duration: .8s
+        animation-delay: 2s
+        animation-fill-mode: forwards
+        transform: scale(0)
+
+@keyframes slide-right
+    0%
+        transform: translateX(-100%)
+        opacity: 0
+
+    10%
+        opacity: 1
+    
+    100%
+        transform: translateX(0)
+        opacity: 1
+
+@keyframes slide-left
+    0%
+        transform: translateX(150%)
+        opacity: 0
+
+    10%
+        opacity: 1
+
+    100%
+        transform: translateX(0)
+        opacity: 1
