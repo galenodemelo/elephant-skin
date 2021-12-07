@@ -11,7 +11,7 @@ export default function Concept() {
                 <div className={styles.quoteSymbol} data-play-on-active>
                     <Image src="/img/decorative/quote-symbol.png" layout="fill" />
                 </div>
-                <div className={styles.decorative}>
+                <div className={styles.decorative} data-play-on-active>
                     <Image src="/img/decorative/elephant-draw-concept.png" layout="fill" objectFit="contain" />
                 </div>
                 <div className={styles.content}>
