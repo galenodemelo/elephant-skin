@@ -21,15 +21,15 @@ export default function Footer({ isActive }: Props) {
                 <div>
                     <div className={styles.header}>
                         <h2 className={styles.heading}>
-                            <small className={styles.headingFirst}>Be An</small>
+                            <small className={styles.headingFirst} data-play-on-active>Be An</small>
                             <PoppingLetters className={styles.headingSecond} triggerAnimation={isActive} animationDelay={1500}>
                                 Elephant
                             </PoppingLetters>
                         </h2>
-                        <p className={styles.subheading}>
+                        <p className={styles.subheading} data-play-on-active>
                             Ready to work with us? Check it out the open positions!
                         </p>
-                        <a href="#" className={[styles.careers, "btn", "btn--pink"].join(" ")}>
+                        <a href="#" className={[styles.careers, "btn", "btn--pink"].join(" ")} data-play-on-active>
                             Careers
                         </a>
                     </div>
