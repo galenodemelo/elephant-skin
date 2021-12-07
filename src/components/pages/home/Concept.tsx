@@ -23,7 +23,7 @@ export default function Concept() {
                             <small><span style={{ textTransform: "uppercase" }}>Henrique Driessen</span> - Founder and CEO</small>
                         </p>
                     </div>
-                    <div className={styles.picto}>
+                    <div className={styles.picto} data-play-on-active>
                         <Image src="/img/elephant-skin-picto-white.svg" layout="fill" />
                     </div>
                 </div>
