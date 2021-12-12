@@ -21,7 +21,15 @@ export default function Intro({ isActive }: Props) {
     }
 
     return (
-        <section className={styles.intro} data-sound-experience={soundExperienceState} onClick={() => toggleSoundExperience(null)}>
+            <div className={styles.cursor} ref={cursorElement}>
+                <div className={[styles.item, styles.soundOff].join(" ")} data-active={!soundExperienceState}>
+                    <Image src="/img/cursor/play-with-sound.gif" layout="fill" />
+                </div>
+                <div className={[styles.item, styles.soundOn].join(" ")} data-active={soundExperienceState}>
+                    <Image src="/img/icons/close.svg" layout="fill" />
+                </div>
+            </div>
+
             <video autoPlay={true} muted={!soundExperienceState} className={styles.background} ref={videoPlayer} loop={true}>
                 <source src="/video/home/intro.webm" type="video/webm" />
             </video>
