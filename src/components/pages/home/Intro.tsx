@@ -1,5 +1,7 @@
 import PoppingLetters from "@components/animated/PoppingLetters"
 import Cities from "@components/templates/Cities"
+
+import Image from "next/image"
 import { useRef, useState } from "react"
 import styles from "./Intro.module.sass"
 
@@ -9,6 +11,7 @@ type Props = {
 
 export default function Intro({ isActive }: Props) {
     const videoPlayer = useRef<HTMLVideoElement>()
+    const cursorElement = useRef<HTMLDivElement>()
     const [soundExperienceState, setSoundExperienceState] = useState(false)
     
     function toggleSoundExperience(state?: boolean) {
@@ -20,8 +23,23 @@ export default function Intro({ isActive }: Props) {
         setSoundExperienceState(!soundExperienceState)
     }
 
+    function followCursor(event: any) {
+        const cursor = cursorElement.current
+        cursor.style.left = event.clientX - cursor.clientWidth / 2 + "px"
+        cursor.style.top = event.clientY - cursor.clientHeight / 2 + "px"
+    }
+
     return (
-        <section className={styles.intro} data-sound-experience={soundExperienceState} onClick={() => toggleSoundExperience(null)}>
+        <section className={styles.intro} data-sound-experience={soundExperienceState} onClick={() => toggleSoundExperience(null)} onMouseMove={(event: any) => followCursor(event)}>
+            <div className={styles.cursor} ref={cursorElement}>
+                <div className={[styles.item, styles.soundOff].join(" ")} data-active={!soundExperienceState}>
+                    <Image src="/img/cursor/play-with-sound.gif" layout="fill" />
+                </div>
+                <div className={[styles.item, styles.soundOn].join(" ")} data-active={soundExperienceState}>
+                    <Image src="/img/icons/close.svg" layout="fill" />
+                </div>
+            </div>
+
             <video autoPlay={true} muted={!soundExperienceState} className={styles.background} ref={videoPlayer} loop={true}>
                 <source src="/video/home/intro.webm" type="video/webm" />
             </video>

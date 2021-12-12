@@ -3,6 +3,32 @@
 .intro
     position: relative
 
+    .cursor
+        position: absolute
+        width: 32px
+        height: 32px
+        z-index: 9999
+        display: none
+
+        .item
+            position: absolute
+            top: -9999px
+            right: -9999px
+            left: -9999px
+            bottom: -9999px
+            margin: auto
+            width: 0
+            height: 0
+            transition: height .4s ease, width .4s ease
+
+            &.soundOff[data-active="true"]
+                width: 160px
+                height: 160px
+
+            &.soundOn[data-active="true"]
+                width: 64px
+                height: 64px
+
     .background
         position: absolute
         top: 0
@@ -71,3 +97,9 @@
             margin: 40px 0 -100px
             display: flex
             justify-content: center
+
+    &:hover 
+        cursor: none
+
+        .cursor
+            display: block
