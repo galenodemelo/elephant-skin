@@ -3,7 +3,11 @@ import Cities from "@components/templates/Cities"
 import { useRef, useState } from "react"
 import styles from "./Intro.module.sass"
 
-export default function Intro({ isActive }) {
+type Props = {
+    isActive?: boolean
+}
+
+export default function Intro({ isActive }: Props) {
     const videoPlayer = useRef<HTMLVideoElement>()
     const [soundExperienceState, setSoundExperienceState] = useState(false)
     
