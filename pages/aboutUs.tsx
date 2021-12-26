@@ -16,7 +16,7 @@ export default function AboutUs() {
     )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = () => {
     return {
         props: {
             title: "About Us - Elephant Skin - Real State Creative Agency",

@@ -12,7 +12,7 @@ export default function Contact() {
     )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = () => {
     return {
         props: {
             title: "Contact - Elephant Skin - Real State Creative Agency",

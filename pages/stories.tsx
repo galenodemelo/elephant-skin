@@ -12,7 +12,7 @@ export default function Stories() {
     )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = () => {
     return {
         props: {
             title: "Stories - Elephant Skin - Real State Creative Agency",
