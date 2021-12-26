@@ -1,7 +1,34 @@
 import Image from "next/image"
+import { useEffect } from "react"
 import styles from "./WeAreElephants.module.sass"
 
-export default function WeAreElephants() {
+type Props = {
+    isActive?: boolean
+}
+
+export default function WeAreElephants({ isActive }: Props) {
+    useEffect(() => {
+        const GIF_DURATION: number = 1430
+
+        function showNextItemIfPossible(): boolean {
+            const nextItem: HTMLElement | null = document.querySelector(`.${styles.serviceItem}:not(.${styles.show})`)
+            if (!nextItem) return
+        
+            repeatGifAnimation()
+            setInterval(() => {
+                nextItem.classList.add(styles.show)
+                showNextItemIfPossible()
+            }, GIF_DURATION)
+        }
+        
+        function repeatGifAnimation(): void {
+            const gifElement: HTMLImageElement | null = document.querySelector(`.${styles.animation} img`)
+            gifElement.src = gifElement.src.replace(/\?.*$/, "") + "?" + Math.random()
+        }
+
+        if (isActive) showNextItemIfPossible()
+    }, [isActive])
+
     return (
         <section className={styles.weAreElephants}>
             <div className={[styles.container, "grid-centered"].join(" ")}>
@@ -27,10 +54,10 @@ export default function WeAreElephants() {
                 </ul>
                 <div className={styles.elephant}>
                     <div className={styles.background}>
-                        <Image src="/img/decorative/pink-brush-background.png" layout="fill" objectFit="contain" />
+                        <Image src="/img/decorative/pink-brush-background.png" layout="fill" objectFit="contain" loading="eager" />
                     </div>
                     <div className={styles.animation}>
-                        <Image src="/img/decorative/elephant-draw-scientist-dropper.gif" layout="fill" objectFit="contain" />
+                        <Image src="/img/decorative/elephant-draw-scientist-dropper.gif" layout="fill" objectFit="contain" loading="eager" />
                     </div>
                 </div>
             </div>

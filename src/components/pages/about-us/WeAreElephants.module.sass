@@ -18,9 +18,14 @@
                 letter-spacing: 1px
                 text-transform: uppercase
                 color: var(--pink-color)
+                opacity: 0
+                transition: opacity 1s ease
 
                 &:not(:last-of-type)
                     margin-bottom: 1.4rem
+
+                &.show
+                    opacity: 1
 
         .elephant
             flex: 1
