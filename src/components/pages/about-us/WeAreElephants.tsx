@@ -1,7 +1,28 @@
 import Image from "next/image"
+import { useEffect } from "react"
 import styles from "./WeAreElephants.module.sass"
 
-export default function WeAreElephants() {
+type Props = {
+    isActive?: boolean
+}
+
+export default function WeAreElephants({ isActive }: Props) {
+    useEffect(() => {
+        const GIF_DURATION: number = 1430
+
+        function showNextItemIfPossible(): boolean {
+            const nextItem: HTMLElement | null = document.querySelector(`.${styles.serviceItem}:not(.${styles.show})`)
+            if (!nextItem) return
+        
+            setInterval(() => {
+                nextItem.classList.add(styles.show)
+                showNextItemIfPossible()
+            }, GIF_DURATION)
+        }
+
+        if (isActive) showNextItemIfPossible()
+    }, [isActive])
+
     return (
         <section className={styles.weAreElephants}>
             <div className={[styles.container, "grid-centered"].join(" ")}>
