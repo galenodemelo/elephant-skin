@@ -5,7 +5,7 @@ export default function Customers() {
     return (
         <section className={styles.customers}>
             <div className={styles.banner} data-play-on-active>
-                <Image src="/img/decorative/elephant-draw-customers.png" layout="fill" objectFit="cover" objectPosition="right top" /> 
+                <Image src="/img/decorative/elephant-draw-customers.png" layout="fill" objectFit="cover" objectPosition="right top" loading="eager" /> 
             </div>
             <ul className={styles.customerList} swiper-not-scrollable="true" data-play-on-active>
                 {[...Array(24)].map((_, i) => {

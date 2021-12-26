@@ -4,7 +4,7 @@ import styles from "./ProjectItem.module.sass"
 export default function ProjectItem() {
     return (
         <a href="#" className={styles.projectItem} data-play-on-active>
-            <Image src="/img/projects/example.jpg" layout="fill" objectFit="cover" />
+            <Image src="/img/projects/example.jpg" layout="fill" objectFit="cover" loading="eager" />
 
             <div className={styles.info}>
                 <h3 className={styles.title}>
