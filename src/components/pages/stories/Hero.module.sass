@@ -17,14 +17,70 @@
 
             small
                 position: relative
+                display: block
                 left: 8rem
                 top: 5rem
                 font-size: 4rem
                 color: #ffffff
                 z-index: 10
+                animation-name: fade-in-left-kick
+                animation-play-state: paused
+                animation-timing-function: ease
+                animation-duration: 2.2s
+                animation-delay: 1s
+                animation-fill-mode: forwards
+                width: 0
+                white-space: nowrap
+                overflow: hidden
+                transform-origin: 30% bottom
 
             b
                 display: block
                 color: var(--pink-color)
                 font-weight: normal
                 font-size: 24rem
+                animation-name: punch-in
+                animation-play-state: paused
+                animation-timing-function: ease
+                animation-duration: .6s
+                animation-delay: 2.6s
+                animation-fill-mode: forwards
+                opacity: 0
+
+@keyframes fade-in-left-kick
+    0%
+        width: 0
+
+    80%
+        width: 400px
+        transform: rotate(0deg)
+
+    82%
+        transform: rotate(-16deg)
+
+    94%
+        transform: rotate(0deg)
+
+    96%
+        transform: rotate(-4deg)
+
+    100%
+        width: 400px
+        transform: rotate(0deg)
+
+@keyframes punch-in
+    0%
+        transform: scale(0)
+        opacity: 0
+
+    50%
+        transform: scale(1.1)
+        opacity: 1
+
+    65%
+        transform: scale(.8)
+        opacity: 1
+
+    100%
+        transform: scale(1)
+        opacity: 1

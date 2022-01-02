@@ -6,8 +6,8 @@ export default function Hero() {
         <section className={styles.hero}>
             <div className={styles.content}>
                 <h1 className={styles.header}>
-                    <small>Stories that</small>
-                    <b>impact</b>
+                    <small data-play-on-active>Stories that</small>
+                    <b data-play-on-active>impact</b>
                 </h1>
 
                 <Picto color={PictoColor.PINK} />
