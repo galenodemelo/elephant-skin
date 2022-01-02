@@ -1,3 +1,4 @@
+import Picto, { PictoColor } from "@components/animated/Picto"
 import anime from "animejs"
 import Image from 'next/image'
 import { MutableRefObject, useEffect, useRef } from "react"
@@ -25,9 +26,8 @@ export default function Intro({ isActive = false }: Props) {
             <h1 className={styles.heading} ref={headingRef}>
                 Hello,
             </h1>
-            <div className={styles.picto} data-play-on-active>
-                <Image src="/img/elephant-skin-picto-pink.svg" layout="fill" />
-            </div>
+
+            <Picto color={PictoColor.PINK} />
         </section>
     )
 }
