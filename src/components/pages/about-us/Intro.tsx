@@ -7,7 +7,7 @@ export default function Intro() {
             <h1 className={styles.heading}>
                 Hello,
             </h1>
-            <div className={styles.picto}>
+            <div className={styles.picto} data-play-on-active>
                 <Image src="/img/elephant-skin-picto-pink.svg" layout="fill" />
             </div>
         </section>

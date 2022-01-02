@@ -1,3 +1,5 @@
+@import @styles/animations
+
 .intro
     display: flex
     justify-content: center
@@ -8,9 +10,17 @@
         font-family: var(--font-etna)
         font-size: 18rem
         text-transform: uppercase
+        visibility: hidden
 
     .picto
         position: absolute
         width: 40px
         height: 70px
         bottom: 32px
+        animation-name: slide-in-bottom
+        animation-play-state: paused
+        animation-timing-function: ease
+        animation-duration: 1s
+        animation-delay: 2s
+        animation-fill-mode: forwards
+        opacity: 0
