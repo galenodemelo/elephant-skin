@@ -12,7 +12,7 @@ export enum PictoColor {
 
 export default function Picto({ color }: Props) {
     return (
-        <div className={styles.picto}>
+        <div className={styles.picto} data-play-on-active>
             <Image src={`/img/elephant-skin-picto-${color}.svg`} layout="fill" alt="X icon" />
         </div>
     )
