@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import styles from "./Manifesto.module.sass"
+import ManifestoPopUp from "./ManifestoPopUp"
 
 import Manifesto2 from "./slides/Manifesto2"
 import TheJourney from "./slides/TheJourney"
 
 export default function Manifesto() {
     const [currentIndex, setCurrentState] = useState(0)
+    const [isPopUpOpened, setIsPopUpOpened] = useState(false)
 
     const slideList: JSX.Element[] = [
         TheJourney({ active: false }),
@@ -39,10 +41,12 @@ export default function Manifesto() {
 
                 <div className={styles.info}>
                     <div className={styles.rotatedText}>
-                        Click to discover our <em>manifesto</em>.
+                        Click to discover our <em onClick={() => setIsPopUpOpened(true)}>manifesto</em>.
                     </div>
                 </div>
             </div>
+
+            <ManifestoPopUp isOpened={isPopUpOpened} setIsOpened={setIsPopUpOpened} />
         </section>
     )
 }
