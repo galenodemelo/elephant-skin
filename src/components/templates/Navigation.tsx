@@ -16,7 +16,7 @@ type Props = {
 
 export default function Navigation({ isOpened, setOpened }: Props) {
     return (
-        <nav className={styles.nav}>
+        <nav className={styles.nav} data-opened={isOpened}>
             {linkList.map(({ name, link }, index) => {
                 return (
                     <Link href={link} key={index}>
