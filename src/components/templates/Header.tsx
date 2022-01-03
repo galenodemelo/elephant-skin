@@ -6,6 +6,7 @@ import SocialLinks from "./SocialLinks"
 import styles from "./Header.module.sass"
 import HelperLinks from "./HelperLinks"
 import { useState } from "react"
+import Navigation from "./Navigation"
 
 export default function Header() {
     const [opened, setOpened] = useState<boolean>(false)
@@ -37,33 +38,7 @@ export default function Header() {
                         <HelperLinks />
                     </div>
 
-                    <nav className={styles.nav}>
-                        <Link href="/aboutUs">
-                            <a className={styles.link} onClick={() => setOpened(false)}>
-                                Hello
-                            </a>
-                        </Link>
-                        <Link href="/stories">
-                            <a className={styles.link} onClick={() => setOpened(false)}>
-                                Stories
-                            </a>
-                        </Link>
-                        <Link href="#">
-                            <a className={styles.link} onClick={() => setOpened(false)}>
-                                Moodboard
-                            </a>
-                        </Link>
-                        <Link href="#">
-                            <a className={styles.link} onClick={() => setOpened(false)}>
-                                Careers
-                            </a>
-                        </Link>
-                        <Link href="/contact">
-                            <a className={styles.link} onClick={() => setOpened(false)}>
-                                Contact
-                            </a>
-                        </Link>
-                    </nav>
+                    <Navigation isOpened={opened} setOpened={setOpened} />
                 </div>
             </div>
         </header>
